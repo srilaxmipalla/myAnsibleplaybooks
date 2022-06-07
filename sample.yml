@@ -1,0 +1,14 @@
+--- # creating file
+- hosts: all
+  become: yes
+  tasks:
+    - name: creating a playbook
+      file: path=/tmp/hari.txt state=file
+
+    - name: creating a directory
+      file: path=/tmp/rajdir state=directory   
+
+    - name: copying file in hosts
+      copy:
+         src: ./apachefile
+         dest: /home/ansible

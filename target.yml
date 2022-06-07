@@ -1,0 +1,7 @@
+--- # this is target playbook
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+

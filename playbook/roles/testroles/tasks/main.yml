@@ -1,0 +1,2 @@
+- name: install httpd s/w in hosts
+  yum: name=httpd state=present

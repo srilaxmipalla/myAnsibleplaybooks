@@ -1,0 +1,7 @@
+--- # ansible roles
+- hosts: all
+  become: yes
+
+  roles:
+    - testroles    
+

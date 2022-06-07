@@ -1,0 +1,12 @@
+--- # this is tasks playbook
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: Installing httpd software in webservers
+      action: yum pkg=htt state=installed 
+      ignore_errors: yes  
+    - name: Installing mysql s/w webservers
+      action: yum name=mysql state=present

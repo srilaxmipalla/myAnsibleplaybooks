@@ -1,0 +1,11 @@
+--- # installing package git
+- name: installing git software
+  hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: installing git software
+      yum:
+        name: git
+

@@ -1,0 +1,10 @@
+--- # removing java and tomcat
+- name: removing java and tomcat
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: removing java s/w
+      yum: name=java state=absent
+
+    - name: removing tomcat s/w
+      yum: name=apache-tomcat-8.5.79 state=absent    

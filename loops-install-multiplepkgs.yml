@@ -1,0 +1,14 @@
+--- # install multiple packages
+- hosts: all
+  become: yes
+  tasks:
+   - name: installing multiple packages
+     yum: name='{{item}}' state=present
+     with_items:   
+             - httpd
+             - mysql
+             - java
+             - tree
+             - docker
+             - git
+

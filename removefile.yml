@@ -1,0 +1,12 @@
+--- # removing softwares httpd mysql
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: removing s/w httpd 
+      action: yum pkg=httpd state=absent
+
+    - name: removing s/w mysql 
+      action: yum pkg=mysql state=absent   

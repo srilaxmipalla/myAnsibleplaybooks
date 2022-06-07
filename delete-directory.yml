@@ -1,0 +1,8 @@
+--- # deleting a directory
+- hosts: all
+  become: yes
+  tasks:
+    - name: deletind a directory
+      file:
+        path: /home/ansible/awsdirectory
+        state: absent  

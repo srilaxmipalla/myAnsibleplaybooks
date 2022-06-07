@@ -1,0 +1,11 @@
+--- # this is test playbook
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh  
+  tasks:
+    - name: Installing httpd software in webservers
+      action: yum pkg=httpd state=installed
+
+    - name: Installing mysql software in dbservers
+      action: yum pkg=mysql state=present

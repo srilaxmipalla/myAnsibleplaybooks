@@ -1,0 +1,10 @@
+--- # loops playbook
+- hosts: all
+  become: yes
+  user: ansible
+  connection: ssh
+  tasks:
+    - name: install packages
+      yum: 
+       name: ['git', 'docker', 'mysql', 'tree', 'httpd']
+       state: present

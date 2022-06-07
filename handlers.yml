@@ -1,0 +1,12 @@
+--- # handlers playbook
+- hosts: all
+  become: true
+  tasks:
+    - name: installing httpd s/w in webservers
+      action: yum name=httpd state=present
+      notify: install HTTPD software
+        
+  handlers:
+     - name: install HTTPD software
+       action: service name=httpd state=started
+                
